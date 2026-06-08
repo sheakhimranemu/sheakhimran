@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Roboto', sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    color:#333;
+}
+
+/* =====================
+   GLOBAL CONTAINER
+===================== */
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* =====================
+   HEADER
+===================== */
+header{
+    background:#0d47a1;
+    color:#fff;
+    padding:15px 0;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo h2{
+    font-size:22px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav ul li a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active{
+    color:#ffca28;
+}
+
+/* =====================
+   HERO SECTION
+===================== */
+.hero{
+    height:85vh;
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    url('../images/hero-banner.jpg') center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#fff;
+}
+
+.hero h1{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+/* BUTTONS */
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    border-radius:5px;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.btn-primary{
+    background:#ffca28;
+    color:#000;
+}
+
+.btn-primary:hover{
+    background:#ffc107;
+}
+
+.btn-secondary{
+    background:#fff;
+    color:#0d47a1;
+}
+
+/* =====================
+   SECTION TITLE
+===================== */
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    font-size:30px;
+    color:#0d47a1;
+}
+
+/* =====================
+   CATEGORY & CARDS
+===================== */
+.category-grid,
+.why-grid,
+.products-grid,
+.info-grid,
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.category-card,
+.why-card,
+.product-card,
+.info-card{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.category-card:hover,
+.why-card:hover,
+.product-card:hover,
+.info-card:hover{
+    transform:translateY(-5px);
+}
+
+/* ICONS */
+.category-card i,
+.why-card i,
+.info-card i{
+    font-size:35px;
+    color:#0d47a1;
+    margin-bottom:10px;
+}
+
+/* PRODUCT IMAGE */
+.product-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+
+.price{
+    display:inline-block;
+    margin-top:10px;
+    font-weight:bold;
+    color:#ff6f00;
+}
+
+/* =====================
+   PAGE BANNER
+===================== */
+.page-banner{
+    background:#0d47a1;
+    color:#fff;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.page-banner h1{
+    font-size:35px;
+}
+
+/* =====================
+   CONTACT FORM
+===================== */
+.contact-form form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.contact-form button{
+    border:none;
+    cursor:pointer;
+}
+
+/* =====================
+   MAP
+===================== */
+iframe{
+    width:100%;
+    height:350px;
+    border:none;
+    margin-top:20px;
+    border-radius:10px;
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer{
+    background:#0d47a1;
+    color:#fff;
+    padding:40px 0 20px;
+}
+
+.footer-content{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.footer-box a{
+    display:block;
+    color:#fff;
+    text-decoration:none;
+    margin:5px 0;
+}
+
+.footer-box a:hover{
+    color:#ffca28;
+}
+
+hr{
+    margin:20px 0;
+    opacity:0.3;
+}
+
+.copyright{
+    text-align:center;
+}
+
+/* =====================
+   WHATSAPP BUTTON
+===================== */
+.whatsapp-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:#fff;
+    font-size:25px;
+    width:55px;
+    height:55px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    text-decoration:none;
+    box-shadow:0 5px 10px rgba(0,0,0,0.3);
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media(max-width:768px){
+
+    nav ul{
+        flex-direction:column;
+        background:#0d47a1;
+        position:absolute;
+        top:60px;
+        right:0;
+        width:200px;
+        padding:10px;
+        display:none;
+    }
+
+    header .container{
+        flex-direction:column;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+}
